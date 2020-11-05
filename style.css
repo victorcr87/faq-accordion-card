@@ -1,7 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+body {
+  color: hsl(237, 12%, 33%);
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+.full-container {
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 2;
+}
+.light-box {
+  background: -320px -90px / 65% no-repeat url("./images/bg-pattern-desktop.svg")
+    white;
+  width: 920px;
+  height: 70%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.image-container {
+  background: -52px center no-repeat
+    url("./images/illustration-woman-online-desktop.svg");
+  background-size: 70%;
+}
+.box-image {
+  display: block;
+  width: 30%;
+  position: relative;
+  left: -80px;
+  top: 35px;
+  animation: 2s cubic-bezier(0.5, 0.04, 0.46, 0.86) 0s infinite alternate none
+    running float;
+}
+.flex-item {
+  height: 100%;
+  flex: 1 1 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.faqs-container {
+  margin-bottom: 2%;
+}
+.faq {
+  padding-bottom: 1em;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  margin-right: 2em;
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.arrow-icon {
+  height: 0.8em;
+}
+
+.answer {
+  color: hsl(240, 6%, 50%);
+  display: none;
+  margin-bottom: 0;
+}
+.question:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+.question:focus > .question-title {
+  font-weight: 700;
+}
+.question:focus + .answer {
+  display: block;
+}
+@keyframes float {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(5px, 5px);
+  }
+}
+*:focus {
+  outline: none;
 }
