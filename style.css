@@ -106,3 +106,41 @@ body {
 *:focus {
   outline: none;
 }
+.main-image-mobile {
+  display: none;
+}
+@media (max-width: 1000px) {
+  body {
+    height: 100%;
+  }
+  .light-box {
+    flex-direction: column;
+    width: 90%;
+    min-height: 80%;
+  }
+  .box-image {
+    display: none;
+  }
+  .image-container {
+    background: none;
+    background: 27px center no-repeat url("./images/bg-pattern-mobile.svg");
+  }
+  .main-image-mobile {
+    display: block;
+    position: relative;
+    bottom: 65px;
+  }
+  .faqs-container {
+    margin-left: 1em;
+  }
+  .faq {
+    margin-right: 1em;
+  }
+  .faq:last-child {
+    margin-bottom: 2em;
+  }
+  .answer {
+    line-height: 1.2em;
+    font-size: 1.1rem;
+  }
+}
